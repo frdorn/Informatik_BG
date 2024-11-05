@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">  
+    <title>Beispiele innerHTML</title>
+
+    <script>
+    var daten = ["Eins", "Vier", "Drei", "Zwei", "Fünf", "Sechs", "Sieben"]
+
+    function tauschen() {
+      // Zwischensicherung: daten[1] in andere Variable kopieren
+      var tausch = daten[1];
+      // daten[1] kann jetzt überschrieben werden
+      daten[1] = daten[3];
+
+      daten[3] = tausch;
+
+      // Ausgabe des Arrays
+      document.getElementById("Ausgabe").innerHTML = daten;
+    }
+        
+    
+    
+    </script>        
+</head>
+
+<body>     
+  
+  Ein Klick auf den Button soll die Positionen von den Wörtern "Zwei" und "Vier" miteinander vertauschen
+  <br>
+  <input type="button" value="Tauschen" onClick="tauschen()">
+  <p id="Ausgabe"></p>
+</body>
+</html>
