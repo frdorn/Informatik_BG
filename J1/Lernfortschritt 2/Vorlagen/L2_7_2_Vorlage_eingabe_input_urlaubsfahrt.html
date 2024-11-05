@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">  
+    <title> Benzinverbrauch Urlaubsfahrt berechnen </title>
+    <script>
+        function berechneKosten() {
+            // Auslesen der Eingaben
+            var verbrauch = parseFloat(document.getElementById("v").value);
+            var strecke = parseFloat(document.getElementById("s").value);
+            var preis = parseFloat(document.getElementById("p").value);
+
+            
+        }
+
+    </script>
+  </head>
+  
+  <body>
+    <h1>Benzinkosten</h1>
+    <p>Wieviel Liter Benzin benötigt dein Auto durchschnittlich für 100 km? <br>
+	<input id="v" type="Text">  </p>
+    <p>Wieviel km möchtest du fahren? <br>
+	<input id="s" type="Text">  </p>
+    <p>Wieviel Euro kostet ein Liter Benzin? <br>
+	<input id="p" type="Text">  </p>   
+	
+    <input type="button" value="Fahrtkosten berechnen" onclick="berechneKosten()">
+    <p id = "kosten">
+  </body>
+</html>
