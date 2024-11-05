@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">  
+    <title>Beispiel Suche Maximum</title>
+
+    <script>
+    var daten = [5, 13, 78, 93, 20, 1, 91]
+
+    function suche_maximum() {
+        // Annahme: erstes Element ist das Maximum
+        var max = daten[0];
+        // Vergleiche alle weiteren Elemente mit dem Maximum
+        for (var i = 1; i < daten.length; i++) {
+            if (daten[i] > max) {
+                max = daten[i];
+            }
+        }
+        // Ausgabe des Maximums
+        alert(max);
+    }
+        
+    
+    </script>        
+</head>
+
+<body>     
+  
+
+  <input type="button" value="Suche Maximum" onClick="suche_maximum()">
+  <p id="Ausgabe"></p>
+</body>
+</html>
