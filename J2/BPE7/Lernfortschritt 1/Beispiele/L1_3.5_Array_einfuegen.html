@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">  
+    <title>Beispiele innerHTML</title>
+
+    <script>
+    var daten = ["A", "B", "C", "D", "F", "G", "H"]
+
+    function ausgabe() {
+      // Ausgabe des Arrays
+      document.getElementById("Ausgabe").innerHTML = daten;
+    }
+
+    function einfuegen() {
+      var neuerWert = "E";
+      var neuePosition = 4;
+      // for-Schleife, die die Werte jeweils um eine Position nach hinten kopiert (beginnend mit dem letzten Wert)
+      for (var i = daten.length-1; i >= neuePosition ;i--) {
+        daten[i+1] = daten[i];
+      }
+      // Einfügen des neuen Wertes an die nun freie Stelle
+      daten[neuePosition] = neuerWert;
+    }
+        
+    
+    
+    </script>        
+</head>
+
+<body>     
+  <h1>Array: Element einfügen</h1>
+  <p>Ein Klick auf den Einfügen soll den Buchstaben "E" an richtiger Stelle im Array als Element einfügen</p>
+  <br>
+  <input type="button" value="Einfügen" onClick="einfuegen()">
+  <input type="button" value="Ausgabe" onClick="ausgabe()">
+  <p id="Ausgabe"></p>
+</body>
+</html>
