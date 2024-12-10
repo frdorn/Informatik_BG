@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="format.css" type="text/css"> 
+    <title>Verschlüsselung von Buchstaben</title>
+    
+    <script>
+        
+        var alphabetKlar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+        var alphabetGeheim = ["A", "D", "Z", "V", "P", "H", "W", "X", "B", "Q", "R", "C", "O", "Y", "E", "G", "U", "L", "M", "F", "J", "S", "T", "I", "K", "N"];
+        
+        function starteCode() {
+           var buchstabe = document.getElementById("klar").value
+           
+           
+                
+        }
+             
+    </script>
+    
+</head>
+
+<body> 
+ <table>
+  	<tr>
+	   <td class = "halb">           
+        <h1>Verschlüsselung von Buchstaben  </h1>
+	   </td>
+	   <td> 
+        <p> <img src="bilder/buchstaben.jpg" alt="Buchstaben" title="Buchstaben" width="20%" height="auto">           
+     </td>
+	</tr>    
+ </table>   
+ <p> Geben Sie den zu verschlüsselnden Buchstaben ein: </p>
+ <input id="klar" type="text" size="5" maxlength="1">   
+ <input onclick="starteCode()" type="button" value="verschl&uuml;sseln">      
+
+</body>
+</html>

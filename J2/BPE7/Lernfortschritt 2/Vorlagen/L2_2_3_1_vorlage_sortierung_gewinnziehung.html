@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="format.css" type="text/css">
+    <title>Gewinnziehung sortiert</title>
+
+    <script>
+    
+      var gewinnnr = []; 
+    
+      function erfasseGewinnnr() {
+        // Auslesen der eingegebenen Gewinnnummer
+        var neueGewinnnr = parseFloat(document.getElementById("gLnr").value); 
+        
+        
+      }
+    
+      function sortiereArray() {   
+    
+    
+    
+    
+    
+       
+      }                     
+    </script>
+    
+
+</head>
+
+<body>      
+ <table>
+	<tr>
+	   <td class="links">
+		    <h1 class="blau"> Mühlberger Sport Club </h1>
+	   </td>
+	   <td class="rechts">
+        <img src="bilder/logo.jpg" alt="Vereinslogo" title="Unser neues Vereinslogo" width="50%" height="auto">
+	   </td>
+	</tr>
+  </table> 
+  <table class="halb">
+  	<tr>
+	   <td>             
+        <h1>Ziehung der Gewinnlose</h1>       
+	   </td>
+	   <td> 
+         <img src="bilder/lose.jpg" alt="Lose" title="Lose" width="20%" height="auto">        
+     </td>
+	</tr>    
+ </table>
+ <br>     
+ <p> Gezogene Losnummer: 
+     <input id="gLnr" type="text" size="20" maxlength="50"> 
+     <input onclick="erfasseGewinnnr()" type="button" value="hinzuf&uuml;gen"> <br>
+ </p>  
+ <table class="zeile">
+     <tr>
+        <td>Lose mit einem Gewinn:</td>
+        <td></td>
+     </tr>
+     <tr>
+        <td id="gewinne"> </td>
+        <td> <input onclick="sortiereArray()" type="button" value="Sortieren"> </td>                
+     </tr>
+ </table>  
+</body>
+</html>

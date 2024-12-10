@@ -8,29 +8,12 @@
     <script>
     
       function starteCode() {
-        var lotto= [48, 5, 17, 32, 7, 29];
-        var laenge = lotto.length;
-        var zwischenspeicher;
+         var lotto= [48, 5, 17, 32, 7, 29];
+         
         
-        //Sortierung
-        // äußere Schleife, Zähler i, Rückwärts laufend
-        for (var i = laenge - 2; i >= 0; i--) {
-          // innere Schleife, Zähler j, Vorwärts laufend
-          for (var j = 0; j <= i; j++) {
-            // Vergleich der Zahlen, wenn nötig tauschen
-            if (lotto[j] > lotto[j+1])
-            {
-              zwischenspeicher = lotto[j]
-              lotto[j] = lotto[j+1]
-              lotto[j+1] = zwischenspeicher
-            }
-          }
-        }
-
-        alert(lotto)
-
-
         
+         //Sortierung
+         
          
          
          

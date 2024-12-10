@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="format.css" type="text/css"> 
+    <title>Spieler suchen</title>
+    
+    
+    <script>  	
+      var kader= ["Armin", "Batu", "Kai", "Sven", "Paul", "Milan", "Chris", "Dennis", "Emin", "Goran", "Luca", "Nico"];
+      
+      function sucheSpieler() {
+        var name = document.getElementById("name").value;
+
+
+
+      }
+    </script>   
+
+</head>
+
+<body>     
+ <table>
+	<tr>
+	   <td class="links">
+		    <h1 class="blau"> Mühlberger Sport Club </h1>
+	   </td>
+	   <td class="rechts">
+        <img src="bilder/logo.jpg" alt="Vereinslogo" title="Unser neues Vereinslogo" width="50%" height="auto">
+	   </td>
+	</tr>
+ </table> 
+ <br> <br>
+ <table class="halb">
+  	<tr>
+	   <td>             
+        <h1>Abteilung Volleyball <br> Spieler suchen</h1> 
+	   </td>
+	   <td> 
+        <img src="bilder/volleyball.jpg" alt="Volleyball" title="Volleyball" width="50%" height="auto">  
+     </td>
+	</tr>    
+ </table>
+
+ <table>
+ 	<tr>
+    <td class="zehn">
+		  <p> Spielername: </p>     
+	  </td> 
+	  <td>
+		  <p> <input id="name" type="text" size="10" maxlength="10"> </p>   
+	  </td> 
+    
+ 	</tr>
+	<tr>	   
+    <td>
+		  <input onclick = "sucheSpieler()" type="button" value="suchen">      
+    </td> 
+ 	</tr>
+ </table>
+</body>
+</html>
