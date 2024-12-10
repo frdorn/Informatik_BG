@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://shs-start.de/it/j2/lf2/format.css" type="text/css">
+    <title>Zahlen sortieren</title>
+
+    <script>
+
+        function optimierterBubbleSort(){
+            //Array einlesen
+            var zahlen = [10, 1, 2, 3, 4, 5, 6, 7, 8, 9];          
+        
+            var laenge = zahlen.length;
+            var zwischenspeicher;
+            var tausch = false;
+        
+            //Sortierung
+            // äußere Schleife, Zähler i, Rückwärts laufend
+            for (var i = laenge - 2; i >= 0; i--) {
+                tausch = false;
+                // innere Schleife, Zähler j, Vorwärts laufend
+                for (var j = 0; j <= i; j++) {
+                    // Vergleich der Zahlen, wenn nötig tauschen
+                    if (zahlen[j] > zahlen[j+1])
+                    {
+                        zwischenspeicher = zahlen[j]
+                        zahlen[j] = zahlen[j+1]
+                        zahlen[j+1] = zwischenspeicher
+                        tausch = true;
+                    }
+                }
+
+                // wenn tausch == false, dann kann abgebrochen werden
+                if (tausch == false) {
+                    // Setze i auf -1, damit die äußere Schleife abbricht
+                    i = -1;
+                }
+            }           
+           
+            
+
+
+
+
+        }
+    </script>
+    
+
+</head>
+
+<body>
+ <table>
+  	<tr>
+	    <td class = "vierzig">              
+        <h1>Zahlenreihe sortieren</h1>          
+	   </td>
+	   <td> 
+         <img src="https://shs-start.de/it/j2/lf2/bilder/zahlenreihe.jpg" alt="Zahlenreihe" title="Zahlenr

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://shs-start.de/it/j2/lf2/format.css" type="text/css">
+    <title>Zahlen sortieren</title>
+
+    <script>
+
+    function starteCode(){
+        //Array einlesen
+        var zahlen = [];
+        zahlen[0] = parseInt(document.getElementById("z1").value);
+        zahlen[1] = parseInt(document.getElementById("z2").value);
+        zahlen[2] = parseInt(document.getElementById("z3").value);
+        zahlen[3] = parseInt(document.getElementById("z4").value);
+        zahlen[4] = parseInt(document.getElementById("z5").value);
+        
+        var laenge = zahlen.length;
+        var zwischenspeicher;
+    
+        //Sortierung
+        // äußere Schleife, Zähler i, Rückwärts laufend
+        for (var i = laenge - 2; i >= 0; i--) {
+        // innere Schleife, Zähler j, Vorwärts laufend
+            for (var j = 0; j <= i; j++) {
+                // Vergleich der Zahlen, wenn nötig tauschen
+                if (zahlen[j] > zahlen[j+1])
+                {
+                    zwischenspeicher = zahlen[j]
+                    zahlen[j] = zahlen[j+1]
+                    zahlen[j+1] = zwischenspeicher
+                }
+            }
+        }
+        //Ausgabe
+        
+        alert(zahlen)
+        // Alternative Ausgabemöglichkeit:
+        document.getElementById("ergebnis").innerHTML += zahlen;
+           
+           
+           
+    }
+    </script>
+    
+
+</head>
+
+<body> 
+ <table>
+  	<tr>
+	    <td class = "vierzig">            
+        <h1>Zahlenreihe sortieren</h1>          
+	   </td>
+	   <td> 
+			<img src="https://shs-start.de/it/j2/lf2/bilder/zahlenreihe.jpg" alt="Zahlenreihe" title="Zahlenreihe" width="30%" height="auto">            
+     </td>
+	</tr>    
+ </table>
+ <br>              
+    Geben Sie fünf Zahlen ein: 
+    <input id="z1" type="text" size="3" maxlength="5" /> 
+    <input id="z2" type="text" size="3" maxlength="5" /> 
+    <input id="z3" type="text" size="3" maxlength="5" /> 
+    <input id="z4" type="text" size="3" maxlength="5" /> 
+    <input id="z5" type="text" size="3" maxlength="5" />
+
+    
+    <input onclick="starteCode()" type="button" value="sortieren"> <br>
+    <p id="ergebnis">Zahlen sortiert: </p>          
+</body>
+</html>
