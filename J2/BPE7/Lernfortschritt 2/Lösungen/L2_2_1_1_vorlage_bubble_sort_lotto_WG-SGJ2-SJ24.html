@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="format.css" type="text/css">
+    <title>Lottozahlen</title>
+
+    <script>
+    
+      function starteCode() {
+        var lotto= [48, 5, 17, 32, 7, 29];
+        var laenge = lotto.length;
+        var zwischenspeicher;
+        
+        //Sortierung
+        // äußere Schleife, Zähler i, Rückwärts laufend
+        for (var i = laenge - 2; i >= 0; i--) {
+          // innere Schleife, Zähler j, Vorwärts laufend
+          for (var j = 0; j <= i; j++) {
+            // Vergleich der Zahlen, wenn nötig tauschen
+            if (lotto[j] > lotto[j+1])
+            {
+              zwischenspeicher = lotto[j]
+              lotto[j] = lotto[j+1]
+              lotto[j+1] = zwischenspeicher
+            }
+          }
+        }
+
+        alert(lotto)
+
+
+        
+         
+         
+         
+
+        //Ausgabe
+         
+         
+         
+         
+      }
+    </script>   
+
+</head>
+
+<body>  
+ <table>
+  	<tr>
+	   <td class = "vierzig">             
+        <h1>Ziehung der Lottozahlen</h1>         
+	   </td>
+	   <td> 
+         <img src="bilder/lotto.png" alt="Lotto" title="Lotto" width="30%" height="auto">           
+     </td>
+	</tr>    
+ </table>             
+    
+ <input onclick="starteCode()" type="button" value="Lottozahlen sortieren"> <br>
+ <p id="ergebnis">Die Lottozahlen: </p>  
+</body>
+</html>
