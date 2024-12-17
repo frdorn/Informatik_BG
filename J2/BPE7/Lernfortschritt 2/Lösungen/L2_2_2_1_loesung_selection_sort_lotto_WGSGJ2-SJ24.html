@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="format.css" type="text/css"> 
+    <title>Lottozahlen</title>
+
+    <script>
+    
+        var lotto= [48, 5, 17, 32, 7, 29];
+
+        function starteCode() {
+            var minIndex; // Index des kleinsten Elements
+            var zwischenspeicher; // Speicher für Tausch
+            
+            for (var aktIndex=0; aktIndex < lotto.length -1; aktIndex++) {
+                // Annahme: kleinstes Element (minIndex) ganz links
+                minIndex = aktIndex;
+                // prüfen, ob nicht doch ein kleinerer Wert rechts von aktIndex ist
+                // dafür Array mit for-Schleife durchlaufen
+                for (var j = aktIndex+1; j < lotto.length; j++) {
+                    // prüfen, ob Element an aktueller Position(j) kleiner ist als das 
+                    // bisher angenomme kleinste Element (minIndex)
+                    if (lotto[j] < lotto[minIndex]) {
+                        // wenn kleineres Element gefunden, dann Position des Elements als neues minIndex
+                        minIndex = j;
+                    }
+                }
+                // wenn Suche nach kleinstem Element abgeschlossen:
+                // tausche Elemente, damit kleinstes Element ganz link
+                // Tausch nur, wenn kleinstes Element nicht bereits ganz links
+                if (minIndex != aktIndex) {
+                    zwischenspeicher = lotto[minIndex];
+                    lotto[minIndex] = lotto[aktIndex];
+                    lotto[aktIndex] = zwischenspeicher;
+                }
+            }
+            alert("Die sortierten Lottozahlen:" + lotto)
+        }
+    </script>
+
+</head>
+
+<body>                    
+ <table>
+  <tr>
+	   <td class = "vierzig">              
+        <h1>Ziehung der Lottozahlen</h1>         
+	   </td>
+	   <td> 
+         <img src="bilder/lotto.png" alt="Lotto" title="Lotto" width="30%" height="auto">        
+     </td>
+	</tr>    
+ </table>      
+    <input onclick="starteCode()" type="button" value="Lottozahlen sortieren">    
+    <p id="ergebnis"> Die Lottozahlen: </p>        
+</body>
+</html>
