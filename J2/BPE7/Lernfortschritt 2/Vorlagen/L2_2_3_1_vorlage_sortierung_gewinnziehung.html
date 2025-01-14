@@ -10,10 +10,14 @@
       var gewinnnr = []; 
     
       function erfasseGewinnnr() {
-        // Auslesen der eingegebenen Gewinnnummer
-        var neueGewinnnr = parseFloat(document.getElementById("gLnr").value); 
-        
-        
+        //nächstes Element im Array gewinnnr
+        var i = gewinnnr.length;
+        //Einlesen des Gewinnloses in das nächste Element des Array gewinnnr
+        gewinnnr[i] = parseFloat(document.getElementById("gLnr").value);
+        //Textfeld leeren
+        document.getElementById("gLnr").value = "";
+        //Anzeige erweitern um das letzte Element des Array gewinnr
+        document.getElementById("gewinne").innerHTML += gewinnnr[i] + "<br />";        
       }
     
       function sortiereArray() {   

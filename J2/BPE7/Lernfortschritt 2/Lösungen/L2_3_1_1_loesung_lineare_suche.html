@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://shs-start.de/it/j2/format.css" type="text/css">
+    <title>Mitgliederanmeldung</title>
+    
+    <script>    
+
+      var mnr = [1001, 1019, 1014, 1009, 1005, 1002, 1018, 1008, 1003, 1010, 1007, 1004, 1020, 1013, 1015, 1011, 1017, 1012, 1006, 1016];
+    
+      function starteCode() {
+        var nummer = parseInt(document.getElementById("mitgliedsnummer").value);
+        // Wir gehen zunächst davon aus, dass die gesuchte Zahl nicht im Array ist
+        var ausgabe = "Die Mitgliedsnummer wurde nicht gefunden";
+
+        // Hier beginnt die Suche:
+        // Durchlaufen des Arrays von links nach rechts mit einer Schleife
+        for(var i = 0; i < mnr.length; i++) 
+        {
+          // Bei jedem Durchgang prüfen, ob die Zahl an der aktuellen Position gleich der gesuchten Zahl ist
+          if (nummer == mnr[i]) {
+            // Ändern der Ausgabe, Zahl wurde gefunden
+            ausgabe = "Die Mitgliedsnummer wurde gefunden"
+          }  
+        }
+
+        alert(ausgabe);
+
+
+
+        
+
+      }
+           
+    </script>   
+</head>
+
+<body>       
+ <table>
+	<tr>
+	   <td class="links">
+		    <h1 class="blau"> Mühlberger Sport Club </h1>
+	   </td>
+	   <td class="rechts">
+        <img src="https://shs-start.de/it/j2/logo.jpg" alt="Vereinslogo" title="Unser neues Vereinslogo" width="50%" height="auto">
+	   </td>
+	</tr>
+ </table> 
+ <br>
+ 
+ <h1> Anmeldung für Vereinsmitglieder </h1>   
+ <br>            
+ <table>
+ <tr>
+     <td class = "dreissig">
+		     Geben Sie Ihre Mitgliedsnummer ein: 		     
+	   </td> 
+	   <td>
+		    <input id="mitgliedsnummer" type="text" size="5" maxlength="5">
+        <input onclick="starteCode()" type="button" value="anmelden">       		     
+	   </td> 
+ 	</tr>   
+ </table>   
+ <p id="ausgabe"> </p> 
+</body>
+</html>
