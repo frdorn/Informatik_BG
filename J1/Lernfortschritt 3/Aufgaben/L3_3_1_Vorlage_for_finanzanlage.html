@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Verzinsung einer Anlage</title>
+    <script>
+      function verzinseJahre() {
+        // Betrag, Zinssatz und Jahre aus Eingabefeld auslesen
+        var betrag = parseFloat(document.getElementById("eingabe_betrag"))
+        var zinssatz = parseFloat(document.getElementById("eingabe_zsatz"))
+        var jahre = parseFloat(document.getElementById("eingabe_jahre"))
+        
+
+
+      }	  
+    </script>
+  </head>
+  <body>
+    <h2>Verzinsung einer Anlage über eine gewünschte Laufzeit:</h2>
+    <p>Welcher Betrag soll angelegt werden?
+    <input type="text" id="eingabe_betrag">  </p>
+    <p> Zu welchem prozentualen Zinsatz wird verzinst? 
+    <input type="text" id="eingabe_zsatz"> </p>
+    <p>Wieviele Jahre soll die Anlage laufen?
+    <input type="text" id="eingabe_jahre">  </p>
+    <input type="button" value="Berechnen" onclick="verzinseJahre()">
+    <p id = "ergebnis"> </p>
+  </body>
+</html>

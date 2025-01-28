@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Autovermietung</title>
+    <script>
+      function berechnen() {
+        // Wohnort und Mietdauer aus Eingabefeld auslesen
+        var wohnort = document.getElementById("eingabe_ort")
+        var mietdauer = parseFloat(document.getElementById("eingabe_mietdauer"))
+
+
+      }	 	 
+    </script>
+  </head>
+  <body>
+    <h2> Mietpreis Automiete </h2>
+    <p> Wohnort: <input type="text" id="eingabe_ort"> </p>   
+    <p> Mietdauer: <input type="text" id="eingabe_mietdauer"> </p>  
+    <input type="button" value="Mietkosten berechnen" onclick="berechnen()">
+    <p id = "ergebnis">	</p>
+  </body>
+</html>

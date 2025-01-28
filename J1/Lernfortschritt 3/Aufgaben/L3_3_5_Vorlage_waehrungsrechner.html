@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">  
+    <title> Umrechner $ - €</title>
+    <script>	
+      function umrechnen() {
+        // Währung, Wechselkurs und MEnge aus Eingabefeld auslesen
+        var waehrung = document.getElementById("eingabe_waehrung")
+        var kurs = parseFloat(document.getElementById("eingabe_kurs"))
+        var menge = parseFloat(document.getElementById("eingabe_menge"))
+        
+
+
+      }	 	      	 
+	 
+    </script>
+  </head>
+  <body>
+    <h1> Währungsumrechener </h1>
+    <p> <strong> Mit diesem Währungsumrechner können Sie $ in € oder € in $ umrechnen. </strong> </p>
+    <p> In welche Währung möchten Sie umrechnen? 
+    <p> Eingabe: $ oder € 
+    <input id="eingabe_waehrung" type="Text" /> </p>
+    <p> Geben Sie den Wechselkurs €/$ ein: 
+    <input id="eingabe_kurs" type="Text" /> </p>
+    <p> Wieviel möchten Sie von ihrer Währung umwechseln? 
+    <input id="eingabe_menge" type="Text" /> </p>
+    <button onclick="umrechnen()">umrechnen</button>
+	<p id = "ergebnis"> </p>
+  </body>	
+</html>

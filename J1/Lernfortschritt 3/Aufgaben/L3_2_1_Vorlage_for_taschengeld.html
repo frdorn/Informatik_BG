@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Taschengeld</title>
+    <script>
+      function berechnen() {
+        // Betrag und Erhöhung aus Eingabefeld auslesen
+        var betrag = parseFloat(document.getElementById("eingabe_betrag"))
+        var erhoehung = parseFloat(document.getElementById("eingabe_erhoehung"))
+
+
+      }
+  </script>
+  </head>
+  <body>
+    <h2>Taschengeld vom 6. bis zum 21. Lebensjahr</h2>
+    <p> Wie hoch ist das erste Taschengeld? 
+    <input type="text" id="eingabe_betrag"> </p>
+    <p> Um wieviel Euro wird das Taschengeld jährlich erhöht? 
+    <input type="text" id="eingabe_erhoehung"> </p>
+	
+    <input type="button" value="berechnen" onclick="berechnen()">
+    <br><br>
+    <p id = "ergebnis"> </p>
+  </body>
+</html>

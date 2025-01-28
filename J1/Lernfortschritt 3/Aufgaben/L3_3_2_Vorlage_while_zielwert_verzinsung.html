@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ermittlung der Anlagedauer</title>
+    <script>
+      function ermittleAnlagedauer() {
+        // Betrag, Zinssatz und Zielwert aus Eingabefeld auslesen
+        var betrag = parseFloat(document.getElementById("eingabe_betrag"))
+        var zinssatz = parseFloat(document.getElementById("eingabe_zsatz"))
+        var zielwert = parseFloat(document.getElementById("eingabe_zielwert"))
+        
+
+
+      }	      
+	  
+    </script>
+  </head>
+  <body>
+    <h2>Verzinsung einer Anlage bis zu einem gewünschten Zielwert:</h2>
+    <p> Welcher Betrag soll angelegt werden?
+    <input type="text" id="eingabe_betrag"> </p>
+    <p> Zu welchem prozentualen Zinsatz wird verzinst?
+    <input type="text" id="eingabe_zsatz">  </p>
+    <p> Welcher Zielwert soll durch die Anlage realisiert werden?
+    <input type="text" id="eingabe_zielwert"> </p>
+    <input type="button" value="Berechnen" onclick="ermittleAnlagedauer()"><br><br>
+    <p id = "ergebnis"> </p>
+  </body>
+</html>

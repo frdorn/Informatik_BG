@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Aufnahme am WG</title>
+    <script>
+      function pruefe() {
+        // Noten aus Eingabefeld auslesen
+        var noteD = parseFloat(document.getElementById("eingabe_noteD"))
+        var noteE = parseFloat(document.getElementById("eingabe_noteE"))
+        var noteM = parseFloat(document.getElementById("eingabe_noteM"))
+        
+
+
+      }	 	 
+    </script>
+  </head>
+  <body>
+    <h1> Überprüfung der Aufnahmemöglichkeit am Beruflichen Gymnasium</h1>
+    <h2> Bei mittlerem Bildungsabschluss:</h2>
+    <p> Note Fach Deutsch: <input type="text" id="eingabe_noteD"> </p>
+    <p> Note Fach Englisch: <input type="text" id="eingabe_noteE"> </p>
+    <p> Note Fach Mathe: <input type="text" id="eingabe_noteM"> </p>
+    <input type="button" value="Prüfen" onclick="pruefe()"> <br>
+	<p id = "ergebnis"> </p>
+  </body>
+</html>

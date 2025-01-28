@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Preisvorschlag</title>
+    <script>
+      function pruefePreis() {
+        // Preisvorschlag aus Eingabefeld auslesen
+        var preis = parseFloat(document.getElementById("eingabe_preis"))
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Preisvorschlag:</h2>
+    <p>Geben Sie hier Ihren Preisvorschlag ein: </p>
+    <input type="text" id="eingabe_preis">
+    <br> <br>
+    <input type="button" value="Preisvorschlag prüfen" onclick="pruefePreis()">
+    <p id = "ergebnis"> </p>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+﻿<<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Führerschein</title>
+    <script>
+      function pruefen() {
+        // Alter und Theoriestunden aus Eingabefeld auslesen
+        var alter = parseFloat(document.getElementById("eingabe_alter"))
+        var theoriestunden = parseFloat(document.getElementById("eingabe_stunden"))
+
+
+      }	  
+    </script>
+  </head>
+  
+  <body>
+    <h1>Zulassung zur Fahrprüfung</h1>
+    <h2>Geben Sie bitte Ihr Alter und die Anzahl der Theoriestunden an:</h2>    
+    <p> Alter: <input type="text" id="eingabe_alter"> </p>
+    <p> Theoriestunden: <input type="text" id="eingabe_stunden"> </p>    
+    <input type="button" value="Ergebnis" onclick="pruefen()">
+    <p id = "ergebnis"> </p>
+  </body>
+</html>
