@@ -1,0 +1,114 @@
+
+/* DATEI: format.css */
+
+body {
+  background-color: #E0E0E0;	
+  font-family:	Arial;		
+}
+p {
+  text-align: left;
+}			
+h1.blau { 
+  color: blue;
+  font-size: 64px;
+}
+
+ul {
+  list-style-type: circle; 
+}
+
+ol {
+  list-style-type: lower-alpha; 
+}
+
+td.links {
+  border: none;
+  width: 70%;
+}
+
+th.links_blau {
+  border: none;
+  width: 70%;
+  color: blue;
+  font-size: 64px;
+}
+
+td.rechts {
+  border: none;
+  width: 30%;
+}
+
+td {
+  border: none;   
+  text-align: left;
+}
+
+ td.zehn {
+  border: none;   
+  text-align: left;
+  width: 10%;
+}
+
+td.fuenfzehn {
+  border: none;   
+  text-align: left;
+  width: 15%;
+}
+
+td.zwanzig {
+  border: none;   
+  text-align: left;
+  width: 20%;
+}
+
+td.dreissig {
+  border: none;   
+  text-align: left;
+  width: 30%;
+}
+
+td.vierzig {
+  border: none;   
+  text-align: left;
+  width: 40%;
+}
+
+td.halb {
+  border: none;   
+  text-align: left;
+  width: 50%;
+}
+
+td.siebzig {
+  border: none;   
+  text-align: left;
+  width: 70%;
+}
+
+table {
+  border-collapse:collapse;
+  border: none;
+  width:	70%;
+  margin: 0px;
+ 
+}
+
+table.halb {
+  width: 70%;  
+  border: none;
+  margin-left: 0px;   
+}
+
+table.zeile {
+  width: 30%;
+  border: black 1px;
+  padding: 1px;
+  margin-left: 0px;   
+}
+
+.box {
+  border: 1px solid;
+  padding: 5px;
+  width: 200px;
+  background-color: yellow;	
+}
