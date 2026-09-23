@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/Vorlagen/format.css" rel="stylesheet">
+    <title>
+      Wetterstation
+    </title>
+    <script>
+      function starteCode() {
+          var index = parseInt(document.getElementById("mo").value);
+          var index = parseInt(document.getElementById("di").value);
+          var index = parseInt(document.getElementById("mi").value);
+          var index = parseInt(document.getElementById("do").value);
+          var index = parseInt(document.getElementById("fr").value);
+          var index = parseInt(document.getElementById("sa").value);
+          var index = parseInt(document.getElementById("so").value);
+
+
+
+
+
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <section class="thema">
+      <h2>
+        Wochenauswertung
+      </h2>
+    </section>
+    <main>
+      <table class="eingaben">
+        <tr>
+          <td>
+            <label for="mo">
+              Montag:
+            </label>
+          </td>
+          <td>
+            <input id="mo" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="di">
+              Dienstag:
+            </label>
+          </td>
+          <td>
+            <input id="di" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="mi">
+              Mittwoch:
+            </label>
+          </td>
+          <td>
+            <input id="mi" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="don">
+              Donnerstag:
+            </label>
+          </td>
+          <td>
+            <input id="don" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="fr">
+              Freitag:
+            </label>
+          </td>
+          <td>
+            <input id="fr" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="sa">
+              Samstag:
+            </label>
+          </td>
+          <td>
+            <input id="sa" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="so">
+              Sonntag:
+            </label>
+          </td>
+          <td>
+            <input id="so" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+      </table>
+      <button onclick="starteCode()">
+        auswerten
+      </button>
+      <p class="ausgabe" id="ergebnis">
+      </p>
+    </main>
+  </body>
+</html>

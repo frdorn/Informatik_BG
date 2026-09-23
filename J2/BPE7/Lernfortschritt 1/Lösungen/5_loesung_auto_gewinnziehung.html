@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/L%C3%B6sungen/format.css" rel="stylesheet">
+    <title>
+      Automatische Gewinnziehung
+    </title>
+    <script>
+      function starteCode() {        
+          var aGeLose = parseInt(document.getElementById("aGeLose").value);
+          var gewinnnr = [];
+          var zZahl;
+          //Ziehung
+          for(var i = 0; i < aGeLose; i++)
+          {
+              zZahl = Math.floor((Math.random() * 500) + 1);
+              gewinnnr[i] = 1000 + zZahl ;   
+          }       
+
+          //Ausgabe
+          for(var i = 0; i< gewinnnr.length; i++)
+          {
+              document.getElementById("gewinne").innerHTML += gewinnnr[i] + "<br>";   
+          }          
+      }      
+    </script>
+  </head>
+  <body>
+    <header class="verein">
+      <h1>
+        Mühlberger Sport Club
+      </h1>
+      <img alt="Vereinslogo" class="logo" src="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/L%C3%B6sungen/bilder/logo.jpg" title="Unser neues Vereinslogo">
+    </header>
+    <section class="thema">
+      <h2>
+        Ziehung der Gewinnlose
+      </h2>
+      <img alt="Dartpfeile" src="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/L%C3%B6sungen/bilder/lose.jpg" title="Dartpfeile">
+    </section>
+    <main>
+      <p>
+        Geben Sie die Anzahl der Gewinnlose hier ein
+        <input id="aGeLose" maxlength="10" size="10" type="text">
+      </p>
+      <button onclick="starteCode()">
+        Lose ziehen
+      </button>
+      <div class="ausgabe" id="gewinne">
+        Lose mit einem Gewinn:
+      </div>
+    </main>
+  </body>
+</html>

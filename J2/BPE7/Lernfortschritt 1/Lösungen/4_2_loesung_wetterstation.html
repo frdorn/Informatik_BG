@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/L%C3%B6sungen/format.css" rel="stylesheet">
+    <title>
+      Wetterstation
+    </title>
+    <script>
+      function starteCode() {
+
+          var tage = [];
+          tage[0] = parseFloat(document.getElementById("mo").value);
+          tage[1] = parseFloat(document.getElementById("di").value);
+          tage[2] = parseFloat(document.getElementById("mi").value);
+          tage[3] = parseFloat(document.getElementById("don").value);
+          tage[4] = parseFloat(document.getElementById("fr").value);
+          tage[5] = parseFloat(document.getElementById("sa").value);
+          tage[6] = parseFloat(document.getElementById("so").value);
+
+          //Auswertung MAX
+          var max = tage[0];
+          for(i=0;i<tage.length;i++)
+          {
+              if(tage[i]>max)
+              {
+                  max = tage[i];
+              }   
+          }
+
+          //Ausertung MIN
+          var min = tage[0];
+          for(i=0;i<tage.length;i++)
+          {
+              if(tage[i]<min)
+              {
+                  min = tage[i];
+              }
+          }
+
+          //Auswertung Mittelwert
+          var mittel = 0;
+          for(i=0;i<tage.length;i++)
+          {
+              mittel = mittel + parseFloat(tage[i]);
+              //mittel = mittel + tage[i]; //=01111111
+          }
+          mittel = mittel / tage.length;
+
+          //Auswertung Abweichung
+          var dif = max - min;
+
+          //Ausgabe in ID=Ergebnis
+          document.getElementById("ergebnis").innerHTML =  "Höchsttemperatur: " + max + "</br>" +
+                                                           "Tiefsttemperatur: " + min + "</br>" +
+                                                           "Durchschnittstemperatur: " + mittel + "</br>" +
+                                                           "Abweichung: " + dif;
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <section class="thema">
+      <h2>
+        Wochenauswertung
+      </h2>
+    </section>
+    <main>
+      <table class="eingaben">
+        <tr>
+          <td>
+            <label for="mo">
+              Montag:
+            </label>
+          </td>
+          <td>
+            <input id="mo" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="di">
+              Dienstag:
+            </label>
+          </td>
+          <td>
+            <input id="di" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="mi">
+              Mittwoch:
+            </label>
+          </td>
+          <td>
+            <input id="mi" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="don">
+              Donnerstag:
+            </label>
+          </td>
+          <td>
+            <input id="don" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="fr">
+              Freitag:
+            </label>
+          </td>
+          <td>
+            <input id="fr" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="sa">
+              Samstag:
+            </label>
+          </td>
+          <td>
+            <input id="sa" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="so">
+              Sonntag:
+            </label>
+          </td>
+          <td>
+            <input id="so" maxlength="3" size="20" type="text">
+          </td>
+        </tr>
+      </table>
+      <button onclick="starteCode()">
+        auswerten
+      </button>
+      <p class="ausgabe" id="ergebnis">
+      </p>
+    </main>
+  </body>
+</html>

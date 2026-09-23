@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/Vorlagen/format.css" rel="stylesheet">
+    <title>
+      Spieleraufnahme
+    </title>
+    <script>
+      var kader = ["Armin", "Batu", "Kai", "Sven", "Paul", "Milan", "Goran", "Chris","Nico", "Dennis", "Emin", "Luca"];
+
+      function einfuegenSpieler() {    
+          var name = document.getElementById("name").value;
+          var index = parseInt(document.getElementById("ind").value);
+
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <header class="verein">
+      <h1>
+        Mühlberger Sport Club
+      </h1>
+      <img alt="Vereinslogo" class="logo" src="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/Vorlagen/bilder/logo.jpg" title="Unser neues Vereinslogo">
+    </header>
+    <section class="thema">
+      <h2>
+        Abteilung Volleyball - Mannschaftskader
+      </h2>
+      <img alt="Volleyball" src="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/Vorlagen/bilder/volleyball.jpg" title="Volleyball">
+    </section>
+    <main>
+      <p>
+        Spieler hinzufügen
+      </p>
+      <table class="eingaben">
+        <tr>
+          <td>
+            <label for="name">
+              Spielername:
+            </label>
+          </td>
+          <td>
+            <input id="name" maxlength="10" size="10" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="ind">
+              Index:
+            </label>
+          </td>
+          <td>
+            <input id="ind" maxlength="3" size="3" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <button onclick="einfuegenSpieler()">
+              einfügen
+            </button>
+          </td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>

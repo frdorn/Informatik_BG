@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/Vorlagen/format.css" rel="stylesheet">
+    <title>
+      Mannschaftsaufstellung
+    </title>
+    <script>
+      var spieler = ["Armin", "Batu", "Kai", "Sven", "Paul", "Milan"];
+
+      function zeigeAufstellung() {
+          window.alert("Diese Spieler sind in der Startaufstellung : " + "\n" + "\n" + spieler);
+      }
+
+      function mannschaftUmstellenPos() {
+          var pos1 = parseInt(document.getElementById("pos1").value);
+          var pos2 = parseInt(document.getElementById("pos2").value);
+
+
+
+
+      }
+    </script>
+  </head>
+  <body>
+    <header class="verein">
+      <h1>
+        Mühlberger Sport Club
+      </h1>
+      <img alt="Vereinslogo" class="logo" src="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/Vorlagen/bilder/logo.jpg" title="Unser neues Vereinslogo">
+    </header>
+    <section class="thema">
+      <h2>
+        Abteilung Volleyball - Mannschaftsaufstellung
+      </h2>
+      <img alt="Volleyball" src="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/Vorlagen/bilder/volleyball.jpg" title="Volleyball">
+    </section>
+    <main>
+      <table class="eingaben">
+        <tr>
+          <td>
+            Startaufstellung:
+          </td>
+          <td>
+            <button onclick="zeigeAufstellung()">
+              anzeigen
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Startaufstellung umstellen:
+          </td>
+          <td>
+            <p>
+              Tausch der Position:
+              <input id="pos1" maxlength="3" size="3" type="text">
+              mit Position:
+              <input id="pos2" maxlength="3" size="3" type="text">
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <button onclick="mannschaftUmstellenPos()">
+              umstellen
+            </button>
+          </td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>

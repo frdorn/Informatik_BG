@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/L%C3%B6sungen/format.css" rel="stylesheet">
+    <title>
+      Kapitalrechner
+    </title>
+    <script>
+      function starteCode() {
+
+          var betrag = parseFloat(document.getElementById("anlagebetrag").value);
+          var dauer = parseInt(document.getElementById("anlagedauer").value);
+          var zinssatz = [0.1, 0.2, 0.3, 0.3, 0.3, 0.4, 0.4, 0.5, 1] ;           
+
+                if(betrag > 50000) {
+
+                    for(var i = 0; i < dauer; i++) {
+                         betrag = betrag + betrag * zinssatz[i] / 100;    
+                    }
+
+                    document.getElementById("auszahlungsbetrag").innerHTML = "nach " + dauer + " Jahren: " + betrag + " Euro";
+               } 
+         else {
+                    window.alert("Der Anlagebetrag muss über 50.000 Euro sein!");
+               }
+      }
+    </script>
+  </head>
+  <body>
+    <section class="thema">
+      <h2>
+        Kapitalrechner
+      </h2>
+    </section>
+    <main>
+      <table class="eingaben">
+        <tr>
+          <td>
+            <label for="anlagebetrag">
+              Anlagebetrag:
+            </label>
+          </td>
+          <td>
+            <input id="anlagebetrag" maxlength="10" size="10" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="anlagedauer">
+              Anlagedauer in Jahren:
+            </label>
+          </td>
+          <td>
+            <input id="anlagedauer" maxlength="2" size="2" type="text">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Auszahlungsbetrag:
+          </td>
+          <td id="auszahlungsbetrag">
+          </td>
+        </tr>
+      </table>
+      <button onclick="starteCode()">
+        Auszahlungsbetrag berechnen
+      </button>
+    </main>
+  </body>
+</html>

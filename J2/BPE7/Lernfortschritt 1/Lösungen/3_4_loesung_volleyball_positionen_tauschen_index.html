@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/L%C3%B6sungen/format.css" rel="stylesheet">
+    <title>
+      Mannschaftsaufstellung
+    </title>
+    <script>
+          var spieler = ["Armin", "Batu", "Kai", "Sven", "Paul", "Milan"];
+
+
+      function zeigeAufstellung() {
+          window.alert("Diese Spieler sind in der Startaufstellung : " + "\n" + "\n" + spieler);
+          }
+
+      function mannschaftUmstellenPos() {
+          var positionA= parseInt(document.getElementById("pos1").value);
+          var positionB= parseInt(document.getElementById("pos2").value);
+          var zwischenspeicher;
+          zwischenspeicher = spieler[positionB -1];
+          spieler[positionB -1] = spieler[positionA -1];
+          spieler[positionA -1] = zwischenspeicher;
+
+          document.getElementById("pos1").value = ""; 
+          document.getElementById("pos2").value = ""; 
+          zeigeAufstellung();
+      }
+    </script>
+  </head>
+  <body>
+    <header class="verein">
+      <h1>
+        Mühlberger Sport Club
+      </h1>
+      <img alt="Vereinslogo" class="logo" src="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/L%C3%B6sungen/bilder/logo.jpg" title="Unser neues Vereinslogo">
+    </header>
+    <section class="thema">
+      <h2>
+        Abteilung Volleyball - Mannschaftsaufstellung
+      </h2>
+      <img alt="Volleyball" src="https://frdorn.github.io/Informatik_BG/J2/BPE7/Lernfortschritt%201/L%C3%B6sungen/bilder/volleyball.jpg" title="Volleyball">
+    </section>
+    <main>
+      <table class="eingaben">
+        <tr>
+          <td>
+            Startaufstellung:
+          </td>
+          <td>
+            <button onclick="zeigeAufstellung()">
+              anzeigen
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Startaufstellung umstellen:
+          </td>
+          <td>
+            <p>
+              Tausch der Position:
+              <input id="pos1" maxlength="3" size="3" type="text">
+              mit Position:
+              <input id="pos2" maxlength="3" size="3" type="text">
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+          </td>
+          <td>
+            <button onclick="mannschaftUmstellenPos()">
+              umstellen
+            </button>
+          </td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>
