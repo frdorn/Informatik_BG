@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="format.css" type="text/css">
+    <title>Losnummernsuche</title>
+    
+    <script>
+    
+      var lnGewinne = [11586, 12569, 22254, 23654, 32541, 55589, 85665, 87512, 98521, 98741];
+    
+      function starteCode() {
+        var losnummer = parseInt(document.getElementById("losnummer").value);
+         
+
+
+
+
+
+      }
+    </script>
+
+</head>
+
+<body>      
+ <table>
+	<tr>
+	   <td class="links">
+		    <h1 class="blau"> Mühlberger Sport Club </h1>
+	   </td>
+	   <td class="rechts">
+    		<img src="bilder/logo.jpg" alt="Vereinslogo" title="Unser neues Vereinslogo" width="50%" height="auto">
+	   </td>
+	</tr>
+  </table> 
+  <table class="halb">
+  	<tr>
+	   <td>             
+        <h1>Gewinnerlose</h1>        
+	   </td>
+	   <td> 
+         <img src="bilder/lose.jpg" alt="Lose" title="Lose" width="20%" height="auto">     
+     </td>
+	</tr>    
+ </table>
+ <br>   
+ <p>Geben Sie hier ihre Losnummer an:
+    <input id="losnummer" type="text" size="5" maxlength="5">
+    <input onclick="starteCode()" type="button" value="Viel Gl&uuml;ck">
+ </p>    
+ <p id="ergebnis"> </p>
+</body>
+</html>
