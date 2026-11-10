@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+	    <meta charset="utf-8">  
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="water.min.css">
+    <title> Höhenmeter berechnen </title>
+    <script>
+	function berechneHoehenmeter(){
+		var temp = parseFloat(document.getElementById("eingabe").value);
+		var meereshoehe = parseFloat(30000-300*temp);
+		document.getElementById("hoehe").innerHTML = " Die Höhe beträgt " + meereshoehe + " Meter.";
+	}				
+    </script>
+  </head>		
+  <body>
+     <h3>Dieser Rechner berechnet die Höhe anhand der Siedetemperatur.</h3>
+     <p> 
+	Siedetemperatur in Grad Celsius: 
+	<input id="eingabe" type="text">
+     </p>
+     <button onclick="berechneHoehenmeter()">Höhe berechnen</button>
+	     <p id="hoehe"></p>
+  </body>
+</html>
+
+	
+
+
+	
+
+
+	
+

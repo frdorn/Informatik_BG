@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+	    <meta charset="utf-8">  
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="water.min.css">
+    <title> Zufallswürfel</title>
+    <script>
+        function wuerfeln() {
+           var zahl = Math.floor(Math.random() * 6) + 1;
+           document.getElementById("ergebnis").innerHTML = "Die gewürfelte Zahl beträgt: " + zahl;
+        }
+    </script>
+  </head>		
+  <body>
+    <h3>Würfelgenerator</h3>
+    <button onclick="wuerfeln()">würfeln</button>
+	    <p id="ergebnis"></p>
+  </body>
+</html>
+
+

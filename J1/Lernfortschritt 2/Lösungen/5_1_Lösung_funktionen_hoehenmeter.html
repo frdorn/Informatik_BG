@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+		<meta charset="utf-8">  
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="water.min.css">
+	<title> Höhenmeter berechnen </title>
+	<script>
+	    function berechneHoehenmeter (pSiedetemperatur){
+			var meereshoehe = parseFloat(30000-300*pSiedetemperatur);
+			return meereshoehe;
+	    }				
+	  
+	    var temp = parseFloat(prompt("Bitte geben Sie die Siedetemperatur des Wassers in Grad Celsius an: "));
+	    var hoehe = berechneHoehenmeter(temp);
+	    alert ("Sie befinden sich auf einer Höhe von " + hoehe + " Meter!" )	
+	</script>
+  </head>		
+
+  <body>
+  </body>
+</html>
+
+
+

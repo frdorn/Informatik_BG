@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+	    <meta charset="utf-8">  
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="water.min.css">
+    <title> Benzinverbrauch Urlaubsfahrt berechnen </title>
+
+    <script>
+        function ermittleKosten(pVerbrauch, pStrecke, pBenzinpreis) 	{
+            var benzinkosten = pVerbrauch * pStrecke * pBenzinpreis/100;
+            return benzinkosten;
+        }
+        var liter = parseFloat(prompt("Wieviel Liter Benzin verbraucht ihr Auto durchschnittlich auf 100 km: "));
+        var strecke = parseFloat(prompt("Wieviel km möchten Sie fahren: "));
+        var preis = parseFloat(prompt("Wieviel kostet ein Liter Benzin in €: "));
+        var kosten = ermittleKosten(liter,strecke,preis);
+        alert ("Die Fahrtkosten für Ihre Urlaubsfahrt betragen " + kosten + " €");
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
